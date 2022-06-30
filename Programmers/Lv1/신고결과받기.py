@@ -1,0 +1,13 @@
+def solution(id_list, report, k):
+    answer = [0] * len(id_list)    
+    reports = {x : 0 for x in id_list}
+    print(set(report))
+    for r in set(report):
+        reports[r.split()[1]] += 1
+    print(reports)
+    for r in set(report):
+        if reports[r.split()[1]] >= k:
+            print(id_list.index(r.split()[0]))
+            answer[id_list.index(r.split()[0])] += 1
+    
+    return answer
