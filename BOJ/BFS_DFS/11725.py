@@ -22,6 +22,6 @@ def bfs(s):
                 parent[i] = x
     return parent
 answer = bfs(1)
-print(answer)
+# print(answer)
 for a in range(2, len(answer)):
     print(answer[a])
